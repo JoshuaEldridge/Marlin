@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "G-Lantern 3.22"
+#define CUSTOM_MACHINE_NAME "G-Lantern 3.23"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -602,12 +602,12 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    // ANET AM8 Genuine E3D at 200 Degree Celsius and 75% Layer Fan + 60 Degree Heated Bed
+    // 3.23
+    // ANET AM8 Genuine E3D at 200 Degree Celsius and 100% Layer Fan + 50 Degree Heated Bed
     // M303 E0 S200 C5
-    // M301 P30.22 I2.55 D89.45
-    #define DEFAULT_Kp  30.22
-    #define DEFAULT_Ki   2.55
-    #define DEFAULT_Kd 89.45
+     #define DEFAULT_Kp  33.71
+    #define DEFAULT_Ki   2.92
+    #define DEFAULT_Kd 97.43
     //Previous AM8 Values
     //#define DEFAULT_Kp  25.50
     //#define DEFAULT_Ki   2.18
@@ -651,11 +651,11 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  // ANET AM8 at 60 Degrees
-  // M303EBED S60 C5
-  #define DEFAULT_bedKp 25.66
-  #define DEFAULT_bedKi 2.27
-  #define DEFAULT_bedKd 72.61
+  // ANET AM8 at 50 Degrees
+  // M303EBED S50 C5
+  #define DEFAULT_bedKp 23.06
+  #define DEFAULT_bedKi 2.04
+  #define DEFAULT_bedKd 65.26
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -963,7 +963,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 //3.22 UPDATES
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 2000 }
 //#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
@@ -984,9 +984,9 @@
 //#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves
 //3.21 UPDATES
 //#define DEFAULT_ACCELERATION          400    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          1100    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
